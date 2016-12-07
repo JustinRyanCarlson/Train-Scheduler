@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image" href="assets/images/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/af.js"></script>
     <title>Train Scheduler</title>
 </head>
 
@@ -20,7 +23,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <h4 class="text-center">Choo Choo. Chee Chee.</h4>
+                            <h4 class="text-center ">Choo Choo. Chee Chee.</h4>
                         </div>
                     </div>
                 </div>
@@ -32,7 +35,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Current Train Schedule</h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="train-results">
                         <div class="row">
                             <div class="col-sm-3">
                                 <h5>Train Name</h5>
@@ -81,14 +84,15 @@
                                 <label for="frenquency">Frenquency (min)</label>
                                 <input type="number" class="form-control" id="frenquency">
                             </div>
-                            <button type="submit" class="btn btn-primary" id="submit-buttom">Submit</button>
+                            <button value="Submit" type="submit" class="btn btn-primary" id="submit-button">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
