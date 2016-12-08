@@ -65,7 +65,7 @@ function displayTrains() {
     var minutesAwayCol = $('<div>').addClass('col-sm-2');
     minutesAwayCol.append($('<h5>').text('Minutes Away'));
     rowDiv.append(minutesAwayCol);
-    $('#train-results').append(rowDiv).append('<hr>');
+    $('#train-results').append(rowDiv);
 
     database.ref().on("value", function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
@@ -74,6 +74,7 @@ function displayTrains() {
             var firstTrainTimeSnap = childSnapshot.val().firstTrainTime;
             var frenquencySnap = childSnapshot.val().frenquency;
 
+            $('#train-results').append('<hr>');
             var rowDiv = $('<div>').addClass('row');
             var trainNameCol = $('<div>').addClass('col-sm-3');
             trainNameCol.append($('<h5>').text(trainNameSnap));
@@ -86,7 +87,7 @@ function displayTrains() {
             rowDiv.append(frenquencyCol);
             var nextArrivalCol = $('<div>').addClass('col-sm-2');
             var minutesAwayCol = $('<div>').addClass('col-sm-2');
-            $('#train-results').append(rowDiv).append('<hr>');
+            $('#train-results').append(rowDiv);
         });
         // If it fails, cue error handling.
     }, function(errorObject) {
